@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            <%=title %>
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="../../monitor/views/css/layout.css" rel="stylesheet">
+        <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css">
+    </head>
+    <body>
+        <% for(var i in messages){ %>
+            <div class="flash"> <%= messages[i] %></div>
+        <% } %>
+        <form action="/signup" method="post">
+            <div>
+                <label class="signupLabel">First Name : </label>
+                <input type="text" name="firstName"/>
+            </div>
+
+            <div>
+                <label class="signupLabel">Last Name : </label>
+                <input type="text" name="lastName"/>
+            </div>
+
+            <div>
+                <label class="signupLabel">Email : </label>
+                <input type="text" name="email"/>
+            </div>
+
+            <div>
+                <label class="signupLabel">User Name : </label>
+                <input type="text" name="username"/>
+            </div>
+
+            <div>
+                <label class="signupLabel">Password : </label>
+                <input type="text" name="password"/>
+            </div>
+            <div>
+                <label class="signupLabel">Valve Information : </label>
+                <input type="text" name="info"/>
+            </div>
+
+            <div>
+                <label class="signupLabel">Monitor Channal 1 : </label>
+                <input type="text" name="monitorCh1"/>
+            </div>
+
+            <div>
+                <label class="signupLabel">Monitor Channel 2 : </label>
+                <input type="text" name="monitorCh2"/>
+            </div>
+
+            <div>
+                <label class="signupLabel">Monitor Channel 3 : </label>
+                <input type="text" name="monitorCh3"/>
+            </div>
+
+            <div>
+                <label class="signupLabel">Control : </label>
+                <input type="text" name="control"/>
+            </div>
+
+            <div>
+                <label class="signupLabel">Control key : </label>
+                <input type="text" name="controlKey"/>
+            </div>
+
+            <div>
+                <input class="btn btn-default" type="submit" value="Sign Up"/>
+            </div>
+
+        </form>
+    </body>
+</html>

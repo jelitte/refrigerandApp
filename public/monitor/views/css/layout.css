@@ -1,0 +1,414 @@
+.red {
+    background-color:red;
+}
+
+.blue {
+    background-color:blue;
+}
+
+[class*="col-"] {
+    padding: 30px;
+    /* border: 1px solid gray;*/
+
+}
+
+
+
+header{
+    background-color:darkblue;
+}
+section{
+
+    /*background-color: floralwhite;*/
+
+}
+
+#floatLeft{
+
+    position: static;
+    float: left;
+    background-color: white;
+
+}
+#floatRight{
+
+    position: static;
+    float: left;
+    background-color: white;
+
+}
+
+aside{
+    background-color: aliceblue;
+    float: right;
+    height : 270px;
+    overflow: auto;
+}
+
+footer{
+    background-color: black;
+    clear: both;
+}
+
+.sectionCondition{
+    background-color: floralwhite;
+}
+#statusWindow{
+
+    background-color: sandybrown;
+
+    /*width: 500px;*/
+
+}
+#statusWindowUpper{
+
+}
+#statusWindowLower{
+    height: 100px;
+    overflow: scroll;
+
+}
+
+.signupLabel{
+    display: inline-block;
+    width: 150px;
+    text-align: right;
+    margin-top: 2px;
+}
+
+th{
+    width: 100px;
+    height: 30px;
+
+}
+td{
+    width: 110px;
+    text-align: left;
+
+}
+input{
+    width: 100px;
+}
+
+
+
+/* led css */
+.led-gray,
+.led-gray-blink,
+.led-red,
+.led-red-blink,
+.led-orange,
+.led-orange-blink,
+.led-green,
+.led-green-blink,
+.led-yellow,
+.led-yellow-blink,
+.led-blue,
+.led-blue-blink {
+  /*margin: 0 auto;*/
+  /*width: 24px;
+  height: 24px;*/
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.led-gray,
+.led-gray-blink {
+  background-color: #aab2bd;
+  box-shadow: #aab2bd 0 -1px 6px 1px, inset #656d78 0 -1px 8px, #656d78 0 1px 6px;
+}
+
+.led-red,
+.led-red-blink {
+  background-color: #F00;
+  box-shadow: #7D7B80 0 -1px 6px 1px, inset #600 0 -1px 8px, #F00 0 3px 11px;
+}
+
+.led-orange,
+.led-orange-blink {
+  background-color: #FF7000;
+  box-shadow: #7D7B80 0 -1px 6px 1px, inset #630 0 -1px 8px, #FF7000 0 3px 11px;
+}
+
+.led-green,
+.led-green-blink {
+  background-color: #80FF00;
+  box-shadow: #7D7B80 0 -1px 6px 1px, inset #460 0 -1px 8px, #80FF00 0 3px 11px;
+}
+
+.led-yellow,
+.led-yellow-blink {
+  background-color: #FF0;
+  box-shadow: #7D7B80 0 -1px 6px 1px, inset #660 0 -1px 8px, #FF0 0 3px 11px;
+}
+
+.led-blue,
+.led-blue-blink {
+  background-color: #06F;
+  box-shadow: #7D7B80 0 -1px 6px 1px, inset #006 0 -1px 8px, #06F 0 3px 11px;
+}
+
+@-moz-keyframes blinkGray {
+  0% {
+    background-color: #aab2bd;
+  }
+  50% {
+    background-color: #CBD5E2;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 6px 1px, inset #441313 0 -1px 8px, #aab2bd 0 1px 0;
+  }
+  100% {
+    background-color: #aab2bd;
+  }
+}
+@-webkit-keyframes blinkGray {
+  0% {
+    background-color: #aab2bd;
+  }
+  50% {
+    background-color: #CBD5E2;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 6px 1px, inset #441313 0 -1px 8px, #aab2bd 0 1px 0;
+  }
+  100% {
+    background-color: #aab2bd;
+  }
+}
+@keyframes blinkGray {
+  0% {
+    background-color: #aab2bd;
+  }
+  50% {
+    background-color: #CBD5E2;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 6px 1px, inset #441313 0 -1px 8px, #aab2bd 0 1px 0;
+  }
+  100% {
+    background-color: #aab2bd;
+  }
+}
+@-moz-keyframes blinkRed {
+  0% {
+    background-color: #db212b;
+  }
+  50% {
+    background-color: #db212b;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 6px 1px, inset #441313 0 -1px 8px, #db212b 0 1px 0;
+  }
+  100% {
+    background-color: #db212b;
+  }
+}
+@-webkit-keyframes blinkRed {
+  0% {
+    background-color: #db212b;
+  }
+  50% {
+    background-color: #db212b;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 6px 1px, inset #441313 0 -1px 8px, #db212b 0 1px 0;
+  }
+  100% {
+    background-color: #db212b;
+  }
+}
+@keyframes blinkRed {
+  0% {
+    background-color: #db212b;
+  }
+  50% {
+    background-color: #db212b;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 6px 1px, inset #441313 0 -1px 8px, #db212b 0 1px 0;
+  }
+  100% {
+    background-color: #db212b;
+  }
+}
+@-moz-keyframes blinkYellow {
+  0% {
+    background-color: #FF0;
+  }
+  50% {
+    background-color: #AA0;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 6px 1px, inset #441313 0 -1px 8px, #FF0 0 1px 0;
+  }
+  100% {
+    background-color: #FF0;
+  }
+}
+@-webkit-keyframes blinkYellow {
+  0% {
+    background-color: #FF0;
+  }
+  50% {
+    background-color: #AA0;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 6px 1px, inset #441313 0 -1px 8px, #FF0 0 1px 0;
+  }
+  100% {
+    background-color: #FF0;
+  }
+}
+@keyframes blinkYellow {
+  0% {
+    background-color: #FF0;
+  }
+  50% {
+    background-color: #AA0;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 6px 1px, inset #441313 0 -1px 8px, #FF0 0 1px 0;
+  }
+  100% {
+    background-color: #FF0;
+  }
+}
+@-moz-keyframes blinkOrange {
+  0% {
+    background-color: #FF7000;
+  }
+  50% {
+    background-color: #FFB061;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 6px 1px, inset #441313 0 -1px 8px, #FF7000 0 1px 0;
+  }
+  100% {
+    background-color: #FF7000;
+  }
+}
+@-webkit-keyframes blinkOrange {
+  0% {
+    background-color: #FF7000;
+  }
+  50% {
+    background-color: #FFB061;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 6px 1px, inset #441313 0 -1px 8px, #FF7000 0 1px 0;
+  }
+  100% {
+    background-color: #FF7000;
+  }
+}
+@keyframes blinkOrange {
+  0% {
+    background-color: #FF7000;
+  }
+  50% {
+    background-color: #FFB061;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 6px 1px, inset #441313 0 -1px 8px, #FF7000 0 1px 0;
+  }
+  100% {
+    background-color: #FF7000;
+  }
+}
+@-moz-keyframes blinkBlue {
+  0% {
+    background-color: #5d9cec;
+  }
+  50% {
+    background-color: #2b7bff;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 6px 1px, inset #441313 0 -1px 8px, #5d9cec 0 1px 0;
+  }
+  100% {
+    background-color: #5d9cec;
+  }
+}
+@-webkit-keyframes blinkBlue {
+  0% {
+    background-color: #5d9cec;
+  }
+  50% {
+    background-color: #2b7bff;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 6px 1px, inset #441313 0 -1px 8px, #5d9cec 0 1px 0;
+  }
+  100% {
+    background-color: #5d9cec;
+  }
+}
+@keyframes blinkBlue {
+  0% {
+    background-color: #5d9cec;
+  }
+  50% {
+    background-color: #2b7bff;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 6px 1px, inset #441313 0 -1px 8px, #5d9cec 0 1px 0;
+  }
+  100% {
+    background-color: #5d9cec;
+  }
+}
+@-moz-keyframes blinkGreen {
+  0% {
+    background-color: #80FF00;
+  }
+  50% {
+    background-color: #6cff82;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 6px 1px, inset #441313 0 -1px 8px, #80FF00 0 1px 0;
+  }
+  100% {
+    background-color: #80FF00;
+  }
+}
+@-webkit-keyframes blinkGreen {
+  0% {
+    background-color: #80FF00;
+  }
+  50% {
+    background-color: #6cff82;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 6px 1px, inset #441313 0 -1px 8px, #80FF00 0 1px 0;
+  }
+  100% {
+    background-color: #80FF00;
+  }
+}
+@keyframes blinkGreen {
+  0% {
+    background-color: #80FF00;
+  }
+  50% {
+    background-color: #6cff82;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 6px 1px, inset #441313 0 -1px 8px, #80FF00 0 1px 0;
+  }
+  100% {
+    background-color: #80FF00;
+  }
+}
+.led-gray-blink {
+  -webkit-animation: blinkGray 0.7s infinite;
+  -moz-animation: blinkGray 0.7s infinite;
+  -ms-animation: blinkGray 0.7s infinite;
+  -o-animation: blinkGray 0.7s infinite;
+  animation: blinkGray 0.7s infinite;
+}
+
+.led-red-blink {
+  -webkit-animation: blinkRed 0.7s infinite;
+  -moz-animation: blinkRed 0.7s infinite;
+  -ms-animation: blinkRed 0.7s infinite;
+  -o-animation: blinkRed 0.7s infinite;
+  animation: blinkRed 0.7s infinite;
+}
+
+.led-yellow-blink {
+  -webkit-animation: blinkYellow 0.7s infinite;
+  -moz-animation: blinkYellow 0.7s infinite;
+  -ms-animation: blinkYellow 0.7s infinite;
+  -o-animation: blinkYellow 0.7s infinite;
+  animation: blinkYellow 0.7s infinite;
+}
+
+.led-orange-blink {
+  -webkit-animation: blinkOrange 0.7s infinite;
+  -moz-animation: blinkOrange 0.7s infinite;
+  -ms-animation: blinkOrange 0.7s infinite;
+  -o-animation: blinkOrange 0.7s infinite;
+  animation: blinkOrange 0.7s infinite;
+}
+
+.led-blue-blink {
+  -webkit-animation: blinkBlue 0.7s infinite;
+  -moz-animation: blinkBlue 0.7s infinite;
+  -ms-animation: blinkBlue 0.7s infinite;
+  -o-animation: blinkBlue 0.7s infinite;
+  animation: blinkBlue 0.7s infinite;
+}
+
+.led-green-blink {
+  -webkit-animation: blinkGreen 0.7s infinite;
+  -moz-animation: blinkGreen 0.7s infinite;
+  -ms-animation: blinkGreen 0.7s infinite;
+  -o-animation: blinkGreen 0.7s infinite;
+  animation: blinkGreen 0.7s infinite;
+}

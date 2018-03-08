@@ -1,0 +1,306 @@
+<head>
+    <link href="../../monitor/views/css/layout.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<!-- The Monitor view -->
+<div data-ng-controller="MonitorController">
+
+
+
+  <div class="container">
+    <h1> Status Data </h1>
+    <h3> Preesure </h3>
+	<div class="row">
+
+	    <div class="col-md-2">
+	        <div class="panel panel-primary">
+                <div class="panel-heading"> Recovery Pressure</div>
+                <div class="panel-body">{{data_ps01}} MPa</div>
+            </div>
+		</div>
+	    <div class="col-md-2">
+	        <div class="panel panel-primary">
+                <div class="panel-heading"> Comp. Inlet Pressure</div>
+                <div class="panel-body">{{data_ps02}} MPa</div>
+            </div>
+	    </div>
+	    <div class="col-md-2">
+	        <div class="panel panel-primary">
+                <div class="panel-heading"> Comp. Outlet Pressure</div>
+                <div class="panel-body">{{data_ps03}} MPa</div>
+            </div>
+	    </div>
+      <div class="col-md-2">
+         <div class="panel panel-primary">
+                <div class="panel-heading">Recovery Tank Pressure</div>
+                <div class="panel-body">{{data_ps04}} MPa</div>
+            </div>
+     </div>
+     <div class="col-md-2">
+         <div class="panel panel-primary">
+               <div class="panel-heading">Storage Tank Pressure</div>
+               <div class="panel-body">{{data_ps05}} MPa</div>
+           </div>
+     </div>
+
+	</div>
+
+	<div class="row">
+    <h3> Weighting </h3>
+	    <div class="col-md-2">
+	        <div class="panel panel-primary">
+                <div class="panel-heading">Recovery Tank Weighting</div>
+                <div class="panel-body">{{data_pls01}} Kg</div>
+            </div>
+		</div>
+	    <div class="col-md-2">
+	        <div class="panel panel-primary">
+                <div class="panel-heading">Storage Tank Weighting</div>
+                <div class="panel-body">{{data_pls02}} Kg</div>
+            </div>
+	    </div>
+
+
+	</div>
+
+
+  <div class="row">
+      <h3> Temperature </h3>
+      <div class="col-md-2">
+          <div class="panel panel-primary">
+                <div class="panel-heading">Recovery Tank Temp.</div>
+                <div class="panel-body"> {{data_ts01}} &#176;C </div>
+            </div>
+    </div>
+      <div class="col-md-2">
+          <div class="panel panel-primary">
+                <div class="panel-heading">Storage Tank Temp.</div>
+                <div class="panel-body">{{data_ts02}} &#176;C</div>
+            </div>
+      </div>
+      <div class="col-md-2">
+          <div class="panel panel-primary">
+                <div class="panel-heading">Temp. Point 1</div>
+                <div class="panel-body">{{data_t01}} &#176;C</div>
+            </div>
+      </div>
+      <div class="col-md-2">
+          <div class="panel panel-primary">
+                <div class="panel-heading">Temp. Point 2</div>
+                <div class="panel-body">{{data_t02}} &#176;C</div>
+            </div>
+      </div>
+      <div class="col-md-2">
+          <div class="panel panel-primary">
+                <div class="panel-heading">Temp. Point 3</div>
+                <div class="panel-body">{{data_t03}} &#176;C</div>
+            </div>
+      </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-2">
+            <div class="panel panel-primary">
+                  <div class="panel-heading">Temp. Point 4</div>
+                  <div class="panel-body">{{data_t04}} &#176;C</div>
+              </div>
+      </div>
+        <div class="col-md-2">
+            <div class="panel panel-primary">
+                  <div class="panel-heading">Temp. Point 5</div>
+                  <div class="panel-body">{{data_t05}} &#176;C</div>
+              </div>
+        </div>
+        <div class="col-md-2">
+            <div class="panel panel-primary">
+                  <div class="panel-heading">Temp. Point 6</div>
+                  <div class="panel-body">{{data_t06}} &#176;C</div>
+              </div>
+        </div>
+        <div class="col-md-2">
+            <div class="panel panel-primary">
+                  <div class="panel-heading">Temp. Point 7</div>
+                  <div class="panel-body">{{data_t07}} &#176;C</div>
+              </div>
+        </div>
+
+      </div>
+
+
+</div>
+
+
+
+
+
+
+  <hr>
+
+  <div style="position: relative;background: url('img/refriBackgroundImg.png');height:816px;width:1398px; margin-left: auto; margin-right: auto; display: block;">
+    <h1 style="position: absolute; top:-75px;left:700px "> <공정 정보> <h1>
+    <div class ="led-gray" ng-class="{'led-green' : toggleSov1}" style="position: absolute;left:226px;top:458px ">   </div>
+    <div class ="led-gray" ng-class="{'led-green' : toggleSov2}" style="position: absolute;left:501px;top:332px ">   </div>
+    <div class ="led-gray" ng-class="{'led-green' : toggleSov3}" style="position: absolute;left:1042px;top:442px ">   </div>
+    <div class ="led-gray" ng-class="{'led-green' : toggleSov4}" style="position: absolute;left:754px;top:50px ">   </div>
+    <div class ="led-gray" ng-class="{'led-green' : toggleSov5}" style="position: absolute;left:754px;top:87px ">   </div>
+    <div class ="led-gray" ng-class="{'led-green' : toggleSov6}" style="position: absolute;left:462px;top:243px ">   </div>
+    <div class ="led-gray" ng-class="{'led-green' : toggleSov7}" style="position: absolute;left:723px;top:555px ">   </div>
+    <div class ="led-gray" ng-class="{'led-green' : toggleSov8}" style="position: absolute;left:267px;top:758px ">   </div>
+    <div class ="led-gray" ng-class="{'led-green' : toggleSov9}" style="position: absolute;left:1222px;top:73px ">   </div>
+    <div class ="led-gray" ng-class="{'led-green' : toggleSov10}" style="position: absolute;left:100px;top:0px ">   </div>
+    <div class ="led-gray" ng-class="{'led-green' : toggleSov11}" style="position: absolute;left:150px;top:0px ">   </div>
+
+    <div class ="led-gray" ng-class="{'led-green' : toggleLs1}" style="position: absolute;left:300px;top:439px ">   </div>
+    <div class ="led-gray" ng-class="{'led-green' : toggleLs2}" style="position: absolute;left:300px;top:384px ">   </div>
+    <div class ="led-gray" ng-class="{'led-green' : toggleLs3}" style="position: absolute;left:1300px;top:666px ">   </div>
+    <div class ="led-gray" ng-class="{'led-green' : toggleLs4}" style="position: absolute;left:1300px;top:619px ">   </div>
+
+    <div class ="led-gray" ng-class="{'led-green' : toggleCom1}" style="position: absolute;left:709px;top:460px ">   </div>
+    <div class ="led-gray" ng-class="{'led-green' : toggleCon1}" style="position: absolute;left:653px;top:126px ">   </div>
+
+
+
+</div>
+
+</div>
+
+
+
+<!--
+<section class="container center-block">
+
+        <div class="row">
+            <div class="col-md-6 sectionCondition">
+                <h2> Monitoring </h2>
+                <hr>
+
+
+                <table>
+                    <caption> <h3> Sensor </h3> </caption>
+                    <tr>
+                        <th> 비상 경보 : </th>
+                        <td><button class = "btn btn-success btn-lg" ng-class="{'red' : toggleAlert}"></button></td>
+
+                    </tr>
+                    <tr>
+                        <th> 밸브 압력 : </th>
+                        <td> <input type="text" data-ng-model="pressureText"> </td>
+                        <td> bar </td>
+                    </tr>
+                    <tr>
+                        <th> 밸브 가스 : </th>
+                        <td> <input type="text" data-ng-model="gasText"> </td>
+                        <td> ppm </td>
+                    </tr>
+
+                    <tr>
+                        <th> 배관 온도 : </th>
+                        <td> <input type="text" data-ng-model="flangeTemperText"> </td>
+                        <td> &degC   </td>
+                    </tr>
+
+                    <tr>
+                        <th> 배관 압력 : </th>
+                        <td> <input type="text" data-ng-model="flangePressureText"> </td>
+                        <td>bar</td>
+                    </tr>
+
+                    <tr>
+                        <th> 배관 유속 : </th>
+                        <td> <input type="text" data-ng-model="flangeFlowText"> </td>
+                        <td>m/s</td>
+                    </tr>
+
+                </table>
+                <hr>
+
+                <table>
+                    <caption> <h3> Actuator </h3> </caption>
+                    <tr>
+                        <th> Remote : </th>
+                        <td><button class ="btn btn-success btn-lg" ng-class="{'red' : toggleRemote}">   </button></td>
+                    </tr>
+
+                    <tr>
+                        <th> Fault : </th>
+                        <td><button class = "btn btn-success btn-lg"  ng-class="{'red' : toggleFault}">  </button></td>
+                    </tr>
+
+                    <tr>
+                        <th>  Open : </th>
+                        <td><button class = "btn btn-success btn-lg" ng-class="{'red' : toggleOpen}"></button></td>
+                    </tr>
+                    <tr>
+                        <th>  Close : </th>
+                        <td><button class = "btn btn-success btn-lg" ng-class="{'red' : toggleClose}"></button></td>
+                    </tr>
+                </table>
+            </div>
+
+
+            <div class="col-md-6  sectionCondition">
+                <h2> Control Actuator </h2>
+                <hr>
+                <table>
+                    <tr>
+                        <button class="btn btn-primary" ng-click = "sendControl('1')" style="margin-right: 10px" > Open </button>
+
+                    </tr>
+                    <tr>
+                        <button class="btn btn-success" ng-click = "sendControl('2')" style="margin-right: 10px" > Close </button>
+                    </tr>
+                    <tr>
+                        <button class="btn btn-danger" ng-click = "sendControl('3')" style="margin-right: 10px" > Stop </button>
+                    </tr>
+
+                </table>
+            </div>
+
+
+            <div class="col-md-6 sectionCondition">
+              <h2> Valve Information </h2>
+              <hr>
+              <h4> {{refrigerantInfo}} </h4>
+            </div>
+
+
+            <div class="col-md-6" id="statusWindow">
+                <div id="statusWindowUpper">
+
+
+                    <h3> Client Status </h3>
+
+                    <form ng-submit="sendMessage();">
+                        <input type="text" data-ng-model="messageText" style="width: 150px">
+                        <input class = "btn btn-info" type="submit">
+                    </form>
+
+                </div>
+
+
+                <div id ="statusWindowLower">
+
+
+                    <div data-ng-repeat="message in messages" data-ng-switch="message.type">
+
+                        <strong data-ng-switch-when='status'>
+                            <span data-ng-bind="message.created | date:'mediumTime'"></span>
+                            <span data-ng-bind="message.username"></span>
+                            <span>is</span>
+                            <span data-ng-bind="message.text"></span>
+                        </strong>
+
+                        <span data-ng-switch-default>
+                            <span data-ng-bind="message.created | date:'mediumTime'"></span>
+                            <span data-ng-bind="message.username"></span>
+                            <span>:</span>
+                            <span data-ng-bind="message.text"></span>
+                        </span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+</section>
+-->

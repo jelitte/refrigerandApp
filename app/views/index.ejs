@@ -1,0 +1,99 @@
+<!DOCUMENT html>
+<html xmlns:ng="http://angulerjs.org">
+    <head>
+        <title> <%=title %></title>
+        <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css">
+        <link href="../../monitor/views/css/layout.css" rel="stylesheet">
+
+
+    </head>
+    <body>
+        <header class="container">
+            <div class="center-block">
+                <a target="_blank" href="http://www.bseng21.com" style="margin-right: 50px"> <img src="img/logo_bumsuk.png" /></a>
+                <a target="_blank" href="http://www.iae.re.kr"> <img src="img/logo_iae_white.png" /></a>
+
+
+
+                <% if(user){ %>
+                    <a class="btn btn-default" style="float: right" href="/signout">Sign out</a>
+                <% } else { %>
+                <a class="btn btn-default" style="float: right"  href="/signup">Sign up</a>
+                <% } %>
+                <br>
+
+                <h2 style="text-align: center; color: white;"> 냉매 회수 및 세정 시스템 모니터링 시스템</h2>
+
+
+            </div>
+
+        </header>
+
+
+
+
+
+
+
+        <!-- Load the Socket.io client -->
+        <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+
+
+
+	       <!-- Load local libraries -->
+        <script type="text/javascript" src="/lib/angular/angular.js"></script>
+        <script type="text/javascript" src="/lib/angular-route/angular-route.js"></script>
+        <script type="text/javascript" src="/lib/angular-resource/angular-resource.js"></script>
+
+
+        <!-- Load Bootstrap -->
+        <!-- <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"> -->
+        <script type="text/javascript" src="lib/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+        <script type="text/javascript" scr="/lib/jquery/dist/jquery.min.js"></script>
+
+
+
+
+
+        <!-- Load the example module -->
+         <script type="text/javascript" src="/example/example.client.module.js"></script>
+        <script type="text/javascript" src="/example/controller/example.client.controller.js"></script>
+        <script type="text/javascript" src="/example/config/example.client.routes.js"></script>
+
+        	<!-- Load the user module -->
+         <script type="text/javascript" src="/example/users.client.module.js"> </script>
+        <script type="text/javascript" src="/users/service/authentication.client.service.js"> </script>
+
+
+        	<!-- Load the monitor module -->
+	<script type="text/javascript" src="/monitor/monitor.client.module.js"></script>
+	<script type="text/javascript" src="/monitor/services/socket.client.service.js"></script>
+	<script type="text/javascript" src="/monitor/controllers/monitor.client.controller.js"></script>
+	<script type="text/javascript" src="/monitor/config/monitor.client.routes.js"></script>
+
+
+         <script type="text/javascript" src="/application.js"></script>
+
+
+        <script type="text/javascript">
+            window.user =<%- user ||'null' %>;
+        </script>
+
+
+        <section ng-view></section>
+
+
+
+        <footer class="container">
+            <div class="center-block">
+                <div  class="row">
+                <p style="text-align: center; color: white;"> Copyright(C) Institute for Advanced Engineering(IAE) all right reserved.
+                </div>
+            </div>
+        </footer>
+
+
+
+
+    </body>
+</html>
